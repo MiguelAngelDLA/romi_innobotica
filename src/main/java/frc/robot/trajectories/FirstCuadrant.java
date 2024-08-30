@@ -56,7 +56,7 @@ public class FirstCuadrant {
         List.of(
             new Translation2d(0.3, -0.5)
         ),
-        new Pose2d(0.32, -0, Rotation2d.fromDegrees(-90)),
+        new Pose2d(0.35, -0.1, Rotation2d.fromDegrees(-90)),
         config);
 
 
@@ -67,11 +67,11 @@ public class FirstCuadrant {
         config.setReversed(false);
         Trajectory exampleTrajectory = TrajectoryGenerator.generateTrajectory(
         // Start at the origin facing the +X direction
-        new Pose2d(0.32, 0, new Rotation2d(-90)),
+        new Pose2d(0.35, 0.1, new Rotation2d(-90)),
         List.of(
             new Translation2d(0.32, -0.3)
         ),
-        new Pose2d(0.6, -0.6, Rotation2d.fromDegrees(-90)),
+        new Pose2d(0.5, -0.6, Rotation2d.fromDegrees(-90)),
         config);
 
 
@@ -82,11 +82,11 @@ public class FirstCuadrant {
         config.setReversed(true);
         Trajectory exampleTrajectory = TrajectoryGenerator.generateTrajectory(
         // Start at the origin facing the +X direction
-        new Pose2d(0.6, -0.6, new Rotation2d(-90)),
+        new Pose2d(0.5, -0.6, new Rotation2d(-90)),
         List.of(
-            new Translation2d(0.6, -0.2)
+            new Translation2d(0.5, -0.2)
         ),
-        new Pose2d(0.6, 0.15, Rotation2d.fromDegrees(-90)),
+        new Pose2d(0.5, 0.0, Rotation2d.fromDegrees(-90)),
         config);
 
 
@@ -97,7 +97,7 @@ public class FirstCuadrant {
         config.setReversed(false);
         Trajectory exampleTrajectory = TrajectoryGenerator.generateTrajectory(
         // Start at the origin facing the +X direction
-        new Pose2d(0.6, 0.15, new Rotation2d(-90)),
+        new Pose2d(0.6, 0.0, new Rotation2d(-90)),
         List.of(
             new Translation2d(0.75, -0.3)
         ),
@@ -116,7 +116,7 @@ public class FirstCuadrant {
         List.of(
             new Translation2d(1.2, -0.3)
         ),
-        new Pose2d(1.3, -0, Rotation2d.fromDegrees(-90)),
+        new Pose2d(1.5, -0.12, Rotation2d.fromDegrees(-90)),
         config);
 
 
