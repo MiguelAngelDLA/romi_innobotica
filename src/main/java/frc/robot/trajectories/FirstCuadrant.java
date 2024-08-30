@@ -20,13 +20,18 @@ public class FirstCuadrant {
                                        DriveConstants.kvVoltSecondsPerMeter, 
                                        DriveConstants.kaVoltSecondsSquaredPerMeter),
             DriveConstants.kDriveKinematics,
-            5);
+    5);
 
     TrajectoryConfig config =
     new TrajectoryConfig(AutoConstants.kMaxSpeedMetersPerSecond, 
                          AutoConstants.kMaxAccelerationMetersPerSecondSquared)
         .setKinematics(DriveConstants.kDriveKinematics)
-        .addConstraint(autoVoltageConstraint);
+    .addConstraint(autoVoltageConstraint);
+
+
+
+
+
 
     public Trajectory firstMove(){
         config.setReversed(false);
@@ -49,9 +54,9 @@ public class FirstCuadrant {
         // Start at the origin facing the +X direction
         new Pose2d(0.23, -1, new Rotation2d(-90)),
         List.of(
-            new Translation2d(0.23, -0.5)
+            new Translation2d(0.3, -0.5)
         ),
-        new Pose2d(0.25, -0.2, Rotation2d.fromDegrees(-90)),
+        new Pose2d(0.32, -0, Rotation2d.fromDegrees(-90)),
         config);
 
 
@@ -62,11 +67,56 @@ public class FirstCuadrant {
         config.setReversed(false);
         Trajectory exampleTrajectory = TrajectoryGenerator.generateTrajectory(
         // Start at the origin facing the +X direction
-        new Pose2d(0.23, -0.2, new Rotation2d(-90)),
+        new Pose2d(0.32, 0, new Rotation2d(-90)),
         List.of(
-            new Translation2d(0.3, -0.3)
+            new Translation2d(0.32, -0.3)
         ),
-        new Pose2d(0.35, -0.5, Rotation2d.fromDegrees(-90)),
+        new Pose2d(0.6, -0.6, Rotation2d.fromDegrees(-90)),
+        config);
+
+
+        return exampleTrajectory;
+    }
+
+    public Trajectory fourthMove(){
+        config.setReversed(true);
+        Trajectory exampleTrajectory = TrajectoryGenerator.generateTrajectory(
+        // Start at the origin facing the +X direction
+        new Pose2d(0.6, -0.6, new Rotation2d(-90)),
+        List.of(
+            new Translation2d(0.6, -0.2)
+        ),
+        new Pose2d(0.6, 0.15, Rotation2d.fromDegrees(-90)),
+        config);
+
+
+        return exampleTrajectory;
+    }
+
+    public Trajectory fithMove(){
+        config.setReversed(false);
+        Trajectory exampleTrajectory = TrajectoryGenerator.generateTrajectory(
+        // Start at the origin facing the +X direction
+        new Pose2d(0.6, 0.15, new Rotation2d(-90)),
+        List.of(
+            new Translation2d(0.75, -0.3)
+        ),
+        new Pose2d(1.15, -0.7, Rotation2d.fromDegrees(-90)),
+        config);
+
+
+        return exampleTrajectory;
+    }
+
+    public Trajectory sixthMove(){
+        config.setReversed(true);
+        Trajectory exampleTrajectory = TrajectoryGenerator.generateTrajectory(
+        // Start at the origin facing the +X direction
+        new Pose2d(1.15, -0.7, new Rotation2d(-90)),
+        List.of(
+            new Translation2d(1.2, -0.3)
+        ),
+        new Pose2d(1.3, -0, Rotation2d.fromDegrees(-90)),
         config);
 
 

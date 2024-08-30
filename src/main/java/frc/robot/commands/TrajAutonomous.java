@@ -16,7 +16,9 @@ public class TrajAutonomous extends SequentialCommandGroup{
             ResetOdometry,
             drivetrain.createCommandForTrajectory(firstCuadrant.firstMove(), true),
             drivetrain.createCommandForTrajectory(firstCuadrant.secondMove(), true),
-            drivetrain.createCommandForTrajectory(firstCuadrant.thirdMove(), true)
+            drivetrain.createCommandForTrajectory(firstCuadrant.thirdMove(), true),
+            drivetrain.createCommandForTrajectory(firstCuadrant.fourthMove(), true),
+            drivetrain.createCommandForTrajectory(firstCuadrant.fithMove(), true)
         );
     }
     
